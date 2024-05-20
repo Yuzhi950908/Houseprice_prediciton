@@ -1,3 +1,17 @@
+#Digital Sharper Programm：
+#Digital Sharper Programm basiert auf zwei Lernunterrichten von Coursera. Diese sind:
+#1. Python for Everyone
+#2. Machine Learning
+#Jeder Teilnehmer muss sich für ein Projekt entscheiden,
+#in dem ein ML- Algorithmus verwendet wird. Ich habe mich entschieden,
+#den RF-Algorithmus zu benutzen, um Hauspreise vorherzusagen.
+#Zusätzlich plane ich, einen Artikel zu schreiben,
+#in dem die Details zur Idee und zum Algorithmus beschrieben werden,
+#und diesen Artikel auf Medium zu veröffentlichen.
+#Leider habe ich das Projekt noch nicht vollständig abgeschlossen.
+
+
+
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
@@ -41,3 +55,10 @@ plt.xticks(rotation=90)
 plt.tick_params(axis='x', which='both', top=True, bottom=False)
 plt.gca().xaxis.set_ticks_position('top')
 plt.show()
+
+#I choose only Top 3 Features
+#They are 1.OverallQual 2.GrLivArea(Above grade (ground) living area square feet) 3.TotalBsmtSF(Total square feet of basement area)
+
+#Traindataset
+train_dataset = train_dataset_new[['OverallQual', 'GrLivArea','TotalBsmtSF']]
+print(train_dataset)
